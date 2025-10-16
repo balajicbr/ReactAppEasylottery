@@ -3,7 +3,7 @@ import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import axios from "axios";
-import "./Navbar.css";
+import "./NavBar.css";
 import NavCurve2 from "../../assets/NavCurve2.png";
 import { Home, CreditCard, Ticket, MoreHorizontal } from "lucide-react";
 
