@@ -264,7 +264,7 @@ const handleAadharChange = (e) => {
                                 {aadhaarFront ? (
                                     <div className="image-row">
                                     <img className="kyc-image-edit" src={aadhaarFront} alt="Aadhaar Front" onClick={() => setSelectedImage(aadhaarFront)} />
-                                    <i className="fas fa-trash " style={{ fontSize: '18px', margin:"7px" ,fontSize: '20px',color:'#AD1E24'}} onClick={() => setAadhaarFront('')}></i>
+                                    <i className="fas fa-trash " style={{  margin:"7px" ,fontSize: '20px',color:'#AD1E24'}} onClick={() => setAadhaarFront('')}></i>
                                     </div>
                                 ) : (
                                 <div className="image-upload-box">
