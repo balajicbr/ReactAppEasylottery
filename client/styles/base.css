@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * These color variables are shared across all pages.
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+  */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 250 67% 18%; /* #270659 - main dark purple */
+
+    --card: 0 0% 100%;
+    --card-foreground: 250 67% 18%; /* #270659 */
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 250 67% 18%; /* #270659 */
+
+    --primary: 354 74% 38%; /* #AD1E24 - red button */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 246 20% 34%; /* #53426C - body text */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 271 12% 91%; /* #E9E6EE - light border */
+    --muted-foreground: 246 20% 34%; /* #53426C */
+
+    --accent: 271 12% 91%; /* #E9E6EE */
+    --accent-foreground: 250 67% 18%; /* #270659 */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 252 6% 80%; /* #CBC9CF - mid border */
+    --input: 252 6% 80%; /* #CBC9CF */
+    --ring: 354 74% 38%; /* #AD1E24 */
+
+    --radius: 0.5rem;
+
+    /* Lottery specific colors */
+    --lottery-purple: 250 67% 18%; /* #270659 */
+    --lottery-red: 354 74% 38%; /* #AD1E24 */
+    --lottery-body: 246 20% 34%; /* #53426C */
+    --lottery-border-light: 271 12% 91%; /* #E9E6EE */
+    --lottery-border-mid: 265 5% 86%; /* #E1DFE5 */
+    --lottery-border-dark: 252 6% 80%; /* #CBC9CF */
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* --border: 217.2 32.6% 17.5%; */
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

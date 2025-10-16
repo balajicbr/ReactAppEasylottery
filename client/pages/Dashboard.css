@@ -1,0 +1,717 @@
+.dashboard-container {
+  @apply relative w-full mx-auto min-h-screen bg-white overflow-hidden;
+  font-family: 'Spline Sans', -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+/* Tablet Portrait */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .dashboard-container {
+    @apply max-w-[600px];
+  }
+}
+
+/* Tablet Landscape */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .dashboard-container {
+    @apply max-w-[800px];
+  }
+}
+
+/* Background Gradient */
+.dashboard-bg-gradient {
+  @apply absolute inset-0 w-full z-0;
+  top: -93px;
+  height: 587px;
+}
+
+@media (max-width: 991px) {
+  .dashboard-bg-gradient {
+    top: -1px;
+    height: 560px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .dashboard-bg-gradient {
+    height: 650px;
+    top: -50px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .dashboard-bg-gradient {
+    height: 700px;
+    top: -80px;
+  }
+}
+
+.dashboard-bg-gradient svg {
+  @apply w-full h-full;
+}
+
+/* Header */
+.dashboard-header {
+  @apply relative z-10 flex justify-between items-center px-4 py-[17.5px] h-16;
+  background: #F5EFFF;
+}
+
+@media (min-width: 768px) {
+  .dashboard-header {
+    @apply px-8 py-6 h-20;
+  }
+}
+
+.dashboard-logo {
+  @apply w-[222px] h-[44px] object-contain;
+}
+
+@media (min-width: 768px) {
+  .dashboard-logo {
+    @apply w-[280px] h-[56px];
+  }
+}
+
+.header-actions {
+  @apply flex items-center gap-2;
+}
+
+.credits-badge {
+  @apply flex items-center gap-1 px-3 py-[6px] bg-[#E5D8F9] rounded-[40px];
+}
+
+.credits-badge span {
+  @apply text-sm text-[#270659] font-normal;
+  line-height: 140%;
+}
+
+.notification-btn {
+  @apply w-6 h-6 flex items-center justify-center;
+}
+
+/* Main Content */
+.dashboard-content {
+  @apply relative z-10 flex flex-col items-start gap-4 px-[14px] pt-4 pb-2;
+  min-height: calc(100vh - 64px - 80px);
+}
+
+@media (max-width: 991px) {
+  .dashboard-content {
+    margin-top: 4px;
+  }
+}
+
+@media (min-width: 768px) {
+  .dashboard-content {
+    @apply px-8 pt-6 gap-6 pb-4;
+    min-height: calc(100vh - 80px - 80px);
+  }
+}
+
+/* Greeting Section */
+.greeting-section {
+  @apply w-full;
+}
+
+.greeting-content {
+  @apply flex justify-between items-center w-full gap-1;
+}
+
+@media (min-width: 768px) {
+  .greeting-content {
+    @apply gap-4;
+  }
+}
+
+.greeting-text {
+  @apply text-xl font-normal text-[#270659] leading-[26px];
+}
+
+@media (min-width: 768px) {
+  .greeting-text {
+    @apply text-2xl leading-[32px];
+  }
+}
+
+.live-results-btn {
+  @apply flex items-center gap-2 px-4 py-2 bg-[#AD1E24] rounded-[50px] h-9;
+}
+
+.live-results-btn span {
+  @apply text-sm font-semibold text-white;
+}
+
+.live-results-btn svg {
+  @apply w-6 h-6;
+}
+
+/* Stats Section */
+.stats-section {
+  @apply flex justify-between items-center gap-4 w-full;
+}
+
+@media (min-width: 768px) {
+  .stats-section {
+    @apply gap-6;
+  }
+}
+
+.stat-card {
+  @apply relative flex-1 h-[84px] rounded-xl p-4;
+  background: rgba(255, 255, 255, 0.40);
+}
+
+@media (min-width: 768px) {
+  .stat-card {
+    @apply h-[100px] p-6;
+  }
+}
+
+.stat-content {
+  @apply flex flex-col gap-1;
+}
+
+.stat-value {
+  @apply text-xl font-medium text-[#270659] leading-[140%];
+}
+
+@media (min-width: 768px) {
+  .stat-value {
+    @apply text-2xl;
+  }
+}
+
+.stat-label {
+  @apply text-sm font-normal text-[#270659] leading-[140%];
+}
+
+@media (min-width: 768px) {
+  .stat-label {
+    @apply text-base;
+  }
+}
+
+.stat-icon {
+  @apply absolute top-4 right-4 w-10 h-10;
+}
+
+/* Promotional Banner */
+.promo-banner {
+  @apply relative w-full h-[120px] flex items-center justify-between px-5 rounded-xl;
+  background: rgba(255, 255, 255, 0.60);
+}
+
+@media (max-width: 991px) {
+  .promo-banner {
+    margin-top: 1px;
+  }
+}
+
+@media (min-width: 768px) {
+  .promo-banner {
+    @apply h-[140px] px-8;
+  }
+}
+
+.promo-content {
+  @apply flex-1 max-w-[167px];
+}
+
+.promo-text h3 {
+  @apply text-lg font-normal text-[#270659] leading-[100%] mb-3;
+}
+
+@media (min-width: 768px) {
+  .promo-text h3 {
+    @apply text-xl mb-4;
+  }
+}
+
+.copy-code-btn {
+  @apply flex items-center gap-2;
+}
+
+.copy-code-btn span {
+  @apply text-sm font-medium text-[#AD1E24] leading-[130%];
+}
+
+.copy-code-btn svg {
+  @apply w-5 h-5;
+}
+
+.promo-visual {
+  @apply relative w-[143px] h-[74px];
+}
+
+.happy10-card {
+  @apply relative w-full h-full flex items-center justify-center rounded;
+  background: linear-gradient(to right, #352F75, #5E1DBB);
+}
+
+.happy10-text {
+  @apply text-base font-medium text-white leading-[130%];
+  position: absolute;
+  top: 12px;
+  left: 58px;
+}
+
+.gift-icon {
+  @apply absolute bottom-2 right-2 w-8 h-8;
+}
+
+.promo-indicators {
+  @apply absolute bottom-[10px] left-1/2 transform -translate-x-1/2 flex items-center gap-2;
+}
+
+.indicator {
+  @apply w-2 h-2 rounded-full opacity-40 bg-[#76787F];
+}
+
+.indicator.active {
+  @apply w-8 bg-[#5E1DBB] opacity-100;
+}
+
+/* Winning Section */
+.winning-section {
+  position: relative;
+  /* margin-top: 2rem; */
+  margin-bottom: 2rem;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.promo-carousel {
+  width: 100%;
+  height: 140px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.promo-slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Center the dots below */
+.swiper-pagination {
+  bottom: 6px !important;
+}
+
+.swiper-pagination-bullet {
+  background: #999 !important;
+  opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+  background: #270659 !important;
+  /* active dot color */
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .winning-section {
+    @apply my-12 gap-4;
+  }
+}
+
+.winning-content {
+  @apply flex flex-col items-center gap-1;
+}
+
+.winning-text {
+  @apply text-lg font-normal text-[#270659] leading-[150%];
+}
+
+@media (min-width: 768px) {
+  .winning-text {
+    @apply text-xl;
+  }
+}
+
+.winning-amount {
+  @apply text-6xl font-bold leading-[120%];
+  background: linear-gradient(180deg, #461099 32.64%, #270659 69.44%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-top: 13px;
+}
+
+@media (min-width: 768px) {
+  .winning-amount {
+    @apply text-7xl;
+  }
+}
+
+.winning-decorations {
+  @apply absolute top-3 left-0 w-full h-full pointer-events-none;
+}
+
+@media (max-width: 991px) {
+  .winning-decorations {
+    top: 21px;
+    left: 7px;
+  }
+}
+
+.star-left {
+  @apply absolute left-0 top-0 w-24 h-16 transform -rotate-[14.944deg];
+}
+
+.star-right {
+  @apply absolute right-0 top-0 w-24 h-16 transform rotate-[14.944deg];
+}
+
+.claim-btn {
+  @apply flex items-center gap-[6px] text-base font-medium text-[#AD1E24] leading-[120%];
+}
+
+.claim-btn svg {
+  @apply w-5 h-5;
+}
+
+/* Tickets Section */
+.tickets-section {
+  @apply w-full flex flex-col gap-4;
+  margin-top: 40px;
+}
+
+@media (max-width: 991px) {
+  .tickets-section {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .tickets-section {
+    @apply gap-6;
+  }
+}
+
+.tickets-header {
+  @apply flex flex-col gap-3;
+}
+
+.tickets-header h2 {
+  @apply text-xl font-medium text-[#270659] leading-[140%];
+}
+
+@media (min-width: 768px) {
+  .tickets-header h2 {
+    @apply text-2xl;
+  }
+}
+
+.tickets-tabs {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(39, 6, 89, 0.1);
+  overflow-x: auto;
+  gap: 12px;
+  padding-bottom: 10px;
+  /* Hide scrollbar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.tickets-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tickets-tabs .tab {
+  flex: 0 0 auto;
+  /* 👈 prevent flex-grow, let width = content */
+  display: inline-flex;
+  /* shrink to fit text */
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px 5px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #270659;
+
+  border-radius: 6px 6px 0 0;
+  transition: background-color 0.2s ease, font-weight 0.2s ease;
+  white-space: nowrap;
+  /* keep text in one line */
+}
+
+.tickets-tabs .tab.active {
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 30px;
+  background: linear-gradient(to bottom, transparent, rgba(67, 62, 200, 0.3));
+}
+
+.tickets-grid {
+  @apply flex gap-4 overflow-x-auto pb-4;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+@media (min-width: 768px) {
+  .tickets-grid {
+    @apply gap-6 justify-center;
+  }
+}
+
+.tickets-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.ticket-card-dash {
+  @apply relative flex-shrink-0 w-[278px] h-[370px] bg-white rounded-lg border border-[#E3E3E3];
+  box-shadow: 0 1px 4px 0 rgba(73, 39, 126, 0.15);
+}
+
+.ticket-image {
+  @apply w-[244px] h-[244px] rounded-lg object-cover;
+  margin: 16px;
+}
+
+.ticket-prize-banner {
+  @apply absolute top-[235px] left-[19px] w-[238px] h-10 flex items-center justify-center text-white font-semibold text-base;
+  background: linear-gradient(to right, #49277E 0%, #22074C 50%, #49277E 100%);
+  clip-path: polygon(40px 0%, calc(100% - 40px) 0%, 100% 50%, calc(100% - 40px) 100%, 40px 100%, 0% 50%);
+}
+
+.ticket-prize-banner span {
+  @apply text-base font-semibold text-white;
+}
+
+.ticket-actions {
+  @apply absolute bottom-12 left-4 right-4 flex gap-3;
+}
+
+.prize-details-btn {
+  @apply flex-1 h-9 px-4 py-2 border border-[#AD1E33] text-[#AD1E33] text-sm font-medium rounded-[30px] flex items-center justify-center;
+}
+
+.buy-now-btn {
+  @apply flex-1 h-9 px-4 py-2 bg-[#AD1E33] text-white text-sm font-medium rounded-[40px] flex items-center justify-center;
+}
+
+.ticket-draw-date {
+  @apply absolute bottom-4 left-4 right-4 flex justify-between items-center;
+}
+
+.ticket-draw-date span {
+  @apply text-sm font-normal text-[#270659];
+}
+
+.ticket-draw-date svg {
+  @apply w-5 h-5;
+}
+
+.view-all-btn {
+  @apply flex items-center gap-[6px] text-base font-medium text-[#AD1E24] leading-[120%] self-center;
+}
+
+.view-all-btn svg {
+  @apply w-5 h-5;
+}
+
+/* Refer Section */
+.refer-section {
+  @apply relative w-full h-[236px] bg-[#F7F5FA] rounded-t-xl p-6 flex flex-col gap-4;
+}
+
+@media (min-width: 768px) {
+  .refer-section {
+    @apply h-[280px] p-8 gap-6 rounded-xl;
+  }
+}
+
+.refer-content {
+  @apply flex flex-col gap-4 max-w-[238px];
+}
+
+.refer-content h2 {
+  @apply text-[32px] font-normal leading-[100%];
+  background: linear-gradient(95deg, #270659 3.24%, rgba(39, 6, 89, 0.40) 110.91%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .refer-content h2 {
+    @apply text-[40px];
+  }
+}
+
+.refer-content p {
+  @apply text-sm font-normal text-[#53426C] leading-[130%] w-[206px];
+}
+
+@media (min-width: 768px) {
+  .refer-content p {
+    @apply text-base w-[280px];
+  }
+}
+
+.referral-code {
+  @apply inline-flex items-center gap-2 px-3 py-2 border border-dashed border-[#AD1E24] bg-white rounded w-[146px] h-10;
+}
+
+.referral-code span {
+  @apply text-base font-semibold text-[#270659];
+}
+
+.referral-code svg {
+  @apply w-5 h-5;
+}
+
+.refer-illustration {
+  @apply absolute top-4 right-0 w-[198px] h-[194px];
+}
+
+.refer-illustration svg {
+  @apply w-full h-full;
+}
+
+/* Phone Buttons */
+.phone-btn {
+  @apply fixed w-[59px] h-[59px] rounded-[37px] border border-[#35338A] flex items-center justify-center z-20;
+  background: linear-gradient(95deg, #F9B42B 1.83%, #FED604 106.56%);
+  border-width: 3px;
+}
+
+.phone-btn-left {
+  @apply bottom-[100px] left-3;
+}
+
+.phone-btn-right {
+  @apply bottom-[100px] right-3;
+}
+
+.phone-btn svg {
+  @apply w-6 h-6;
+}
+
+.phone-btn svg path {
+  stroke: #181823;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  @apply fixed bottom-0 left-0 right-0 w-full max-w-[412px] mx-auto z-20;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .bottom-nav {
+    @apply max-w-[600px];
+  }
+}
+
+@media (min-width: 1025px) {
+  .bottom-nav {
+    @apply max-w-[800px];
+  }
+}
+
+.bottom-nav-content {
+  @apply relative bg-white flex items-center h-20 pt-4;
+  clip-path: polygon(0 16px,
+      120px 16px,
+      135px 0,
+      200px 0,
+      215px 16px,
+      100% 16px,
+      100% 100%,
+      0 100%);
+}
+
+.nav-item {
+  @apply flex-1 flex flex-col items-center gap-[3px] px-2;
+}
+
+.nav-item.active span {
+  @apply font-semibold text-[#6A538D];
+}
+
+.nav-item.active svg path {
+  @apply fill-[#6A538D];
+}
+
+.nav-item span {
+  @apply text-xs font-normal text-[#6A538D];
+}
+
+.nav-item svg {
+  @apply w-5 h-5;
+}
+
+.nav-item.buy-ticket {
+  @apply relative pt-0;
+}
+
+.buy-ticket-icon {
+  @apply w-10 h-10 rounded-[25px] border border-[#35338A] bg-[#201E5B] flex items-center justify-center mb-[6px];
+}
+
+.nav-highlight {
+  @apply absolute top-0 left-10 right-10 h-[17px];
+}
+
+.nav-highlight svg {
+  @apply w-full h-full;
+}
+
+/* Responsive adjustments */
+@media (max-width: 380px) {
+  .dashboard-container {
+    @apply max-w-full;
+  }
+
+  .greeting-content {
+    @apply flex-col gap-2 items-start;
+  }
+
+  .tickets-grid {
+    @apply gap-2;
+  }
+
+  .ticket-card-dash {
+    @apply w-[250px];
+  }
+
+  .ticket-image {
+    @apply w-[218px] h-[218px];
+  }
+
+  .ticket-prize-banner {
+    @apply w-[212px] top-[209px];
+  }
+
+  .dashboard-content {
+    @apply px-3;
+  }
+}
+
+@media (min-width: 413px) and (max-width: 767px) {
+  .dashboard-container {
+    @apply border-x border-gray-200;
+  }
+}
+
+@media (min-width: 768px) {
+  .dashboard-container {
+    @apply border-x border-gray-300 shadow-lg;
+  }
+}
+
+@media (max-width: 360px) {
+  .stats-section {
+    @apply flex-col gap-2;
+  }
+
+  .stat-card {
+    @apply w-full;
+  }
+}

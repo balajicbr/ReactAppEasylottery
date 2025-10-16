@@ -1,0 +1,7 @@
+.download-btn {
+    color: #ad1e24;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}

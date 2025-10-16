@@ -1,0 +1,44 @@
+/* NotFound Page Specific Styles */
+
+.notfound-container {
+  /* Custom styles specific to NotFound page */
+  background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+}
+
+.notfound-title {
+  /* 404 title specific styling */
+  color: hsl(var(--lottery-purple));
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.notfound-message {
+  /* Error message specific styling */
+  color: hsl(var(--lottery-body));
+}
+
+.notfound-button {
+  /* Back to login button specific styling */
+  transition: all 0.2s ease-in-out;
+  background: hsl(var(--lottery-red));
+}
+
+.notfound-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(173, 30, 36, 0.3);
+  background: hsl(var(--lottery-red) / 0.9);
+}
+
+.notfound-illustration {
+  /* Illustration or icon styling */
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

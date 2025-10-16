@@ -1,0 +1,769 @@
+/* MyWins.css - Recreated from Figma design */
+
+/* Import Spline Sans font */
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;600;700&display=swap');
+
+/* CSS Variables */
+:root {
+  --background-page-bg: #FFF;
+  --background-purple-light: #F6F0FF;
+  --text-color-headline: #270659;
+  --text-color-inverse: #FFF;
+  --background-purple-mid: #E5D8F9;
+  --text-color-body: #53426C;
+  --border-color-line-dark-outline: #CBC9CF;
+  --border-color-outline-hover: #270659;
+  --button-surface: #AD1E24;
+  --icon-color-fab-icon: #181823;
+  --background-yellow-gradient: linear-gradient(95deg, #F9B42B 1.83%, #FED604 106.56%);
+  --icon-color-fab-stroke: linear-gradient(142deg, #35338A 9.52%, #403BB3 90.48%);
+}
+
+/* Main container */
+.my-wins-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  background: var(--background-page-bg);
+  position: relative;
+  margin: 0 auto;
+  gap: 10px;
+  font-family: 'Spline Sans', -apple-system, Roboto, Helvetica, sans-serif;
+}
+.main-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 24px 24px 0 0;
+  background: #ffffff !important;
+  color: #ffffff;
+  position: relative;
+  flex: 1;
+  min-height: 600px;
+}
+.mywins-tab-navigation {
+  position: sticky;
+  z-index: 100;
+  display: flex;
+  width: 380px;
+  height: 44px;
+  padding: 4px;
+  align-items: center;
+  gap: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 3px 0 rgba(16, 24, 40, 0.15), 0 0 3px 0 rgba(16, 24, 40, 0.12);
+}
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  /* Light grey */
+  border-top: 4px solid #270659;
+  /* Your theme color */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+.spinner-text {
+  color: #270659;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.tab-details-content-container {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.mywins-search-bar-container{
+padding: 0px 0px !important;
+
+}
+.mywins-tickets-list{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 16px;
+  justify-content: center;
+  padding-top: 15px;
+}
+.ticket-detail-card{
+    width: 375px;
+   height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.ticket-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 0px;
+}
+.ticket-left {
+  display: inline-block;
+}
+.ticket-top-right {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  gap: 10px;
+  text-align: left;
+  font-size: 1.1rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: #270659;
+}
+.ticket-top-left {
+  position: absolute;
+  width:155px;
+  top: 80px;
+  margin:7px;
+  gap: 10px;
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: #270659;
+}
+.mywin-ticket-number{
+  font-size: 18px;
+  font-weight: 700;
+}
+.mywin-ticket-item{
+  margin: 7px;
+}
+.ticket-bottom {
+  display: flex;
+  position: absolute;
+  justify-content: space-evenly;
+  bottom: 10px;
+  gap: 10px;
+  font-size: 0.85rem;
+  padding: 0% 10px;
+  border-radius: 6px;
+  width: 100%;
+  color: #270659;
+}
+
+/* Page wrapper */
+.page-wrapper {
+  display: flex;
+  width: 412px;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--background-purple-light);
+  position: relative;
+  z-index: 1;
+}
+
+/* Status Bar */
+.status-bar {
+  display: flex;
+  height: 52px;
+  padding: 10px 24px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+  z-index: 10;
+}
+
+.status-time {
+  color: #0B0B0B;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.status-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  height: 64px;
+  padding: 17.5px 16px;
+  align-items: center;
+  align-self: stretch;
+}
+
+.header-content {
+  display: flex;
+  width: 380px;
+  align-items: center;
+  gap: 12px;
+}
+
+.back-button {
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-title {
+  color: var(--text-color-headline);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  margin: 0;
+}
+
+/* Amount Won Card */
+.amount-won-card {
+  width: 380px;
+  height: 105px;
+  position: relative;
+  border-radius: 12px;
+  background: #5E1DBB;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.amount-card-background {
+  position: absolute;
+  inset: 0;
+}
+.mywin-date-input{
+  width:100%;
+}
+@media (min-width: 768px) {
+  .bottom-sheet-content {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 20px;
+  }
+.mywin-date-input {
+  width: 400px;
+}
+.apply-btn{
+  width:200px
+}
+  .date-input-group label {
+    flex: 1;
+  }
+}
+.pattern-svg {
+  width: 520px;
+  height: 520px;
+  position: absolute;
+  left: -70px;
+  top: -188px;
+}
+
+.amount-content {
+  display: flex;
+  width: 271px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  position: absolute;
+  left: 20px;
+  top: 17px;
+  z-index: 2;
+}
+
+.amount-label {
+  color: var(--text-color-inverse);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 110%;
+}
+
+.amount-value {
+  color: var(--text-color-inverse);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.coins-blur {
+  width: 379px;
+  height: 94px;
+  transform: rotate(-34.179deg);
+  filter: blur(2px);
+  position: absolute;
+  left: -16px;
+  top: -55px;
+  z-index: 1;
+}
+
+.coins-image {
+  width: 88px;
+  height: 71px;
+  position: absolute;
+  left: 261px;
+  top: 18px;
+  z-index: 2;
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  width: 412px;
+  padding-bottom: 10px;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.status-badge.expired {
+  background-color:#D92D20;
+}
+.sort-option{
+  width: 100px;
+  padding: 6px 12px;
+  border-radius: 24px;
+  background-color: #f0eaff;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+.sort-option.selected {
+  background-color: #961B21;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+.main-content::before {
+  content: '';
+  width: 412px;
+  height: 677px;
+  border-radius: 24px 24px 0 0;
+  background: #D2BAFF;
+  filter: blur(4.2px);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.main-content-inner {
+  display: flex;
+  height: 681px;
+  padding: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 24px 24px 0 0;
+  background: var(--background-page-bg);
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+/* Tabs Section */
+.tabs-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+}
+
+.tabs-container {
+  display: flex;
+  width: 380px;
+  height: 44px;
+  padding: 4px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: var(--background-page-bg);
+  box-shadow: 0 0 3px 0 rgba(16, 24, 40, 0.15), 0 0 3px 0 rgba(16, 24, 40, 0.12);
+}
+
+.tab {
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  border-radius: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color-body);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  transition: all 0.2s ease;
+}
+
+.tab.active {
+  background: var(--background-purple-mid);
+  color: var(--text-color-headline);
+  font-weight: 500;
+}
+
+/* Search Section */
+.search-section {
+  display: flex;
+  width: 380px;
+  align-items: center;
+  gap: 16px;
+}
+
+.search-input {
+  display: flex;
+  padding: 8px 12px 8px 16px;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+  border-radius: 8px;
+  border: 1px solid var(--border-color-line-dark-outline);
+  background: var(--background-page-bg);
+  box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+}
+
+.search-input input {
+  flex: 1 0 0;
+  color: var(--text-color-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.search-input input::placeholder {
+  color: var(--text-color-body);
+}
+
+/* Control Buttons */
+.control-buttons {
+  display: flex;
+  height: 40px;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.filter-btn {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid var(--text-color-headline);
+  background: var(--background-page-bg);
+  box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+  cursor: pointer;
+}
+
+.view-toggle {
+  display: flex;
+  height: 40px;
+  padding: 12px 4px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--text-color-headline);
+  background: var(--background-page-bg);
+  box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+}
+
+.view-btn {
+  display: flex;
+  padding: 4px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.view-btn.active {
+  background: var(--background-purple-mid);
+}
+
+/* Win Cards */
+.wins-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+}
+
+.win-card {
+  width: 380px;
+  position: relative;
+  background: transparent;
+  margin: 0 auto;
+}
+
+.win-card:first-child {
+  height: 215px;
+}
+
+.win-card.mega5-card {
+  height: 277px;
+}
+
+.card-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.lottery-logo {
+  position: absolute;
+  left: 34px;
+  top: 16px;
+  width: 114px;
+  height: 66px;
+  object-fit: contain;
+}
+
+.mega5-logo {
+  width: 109px;
+  height: 40px;
+}
+
+.ticket-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  position: absolute;
+  left: 50px;
+  top: 94px;
+  width: 73px;
+  height: 49px;
+}
+
+.mega5-ticket {
+  top: 68px;
+  width: 81px;
+}
+
+.ticket-number {
+  color: var(--text-color-headline);
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.ticket-label {
+  color: var(--text-color-body);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.prize-info {
+  display: flex;
+  width: 172px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  position: absolute;
+  left: 174px;
+  top: 16px;
+  height: 88px;
+}
+
+.mega5-prize {
+  height: 120px;
+}
+
+.prize-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.prize-label {
+  color: var(--text-color-headline);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  width: 77px;
+}
+
+.prize-value {
+  color: var(--text-color-headline);
+  text-align: right;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  width: 58px;
+}
+
+.card-divider {
+  width: 358px;
+  height: 2px;
+  background: linear-gradient(90deg, #B994FF 0%, #C7A5FB 100%);
+  position: absolute;
+  left: 10px;
+  top: 160px;
+}
+
+.card-footer {
+  display: flex;
+  width: 332px;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: 24px;
+  top: 169px;
+  height: 40px;
+}
+
+.mega5-footer {
+  gap: 14px;
+  justify-content: flex-start;
+}
+
+.draw-date {
+  display: flex;
+  padding: 8px 0;
+  align-items: center;
+  gap: 4px;
+  border-radius: 8px;
+}
+
+.date-label {
+  color: var(--text-color-headline);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.date-value {
+  color: var(--text-color-headline);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.status-badge {
+  display: flex;
+  width: 102px;
+  padding: 4px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  background: #53426C;
+  color: var(--text-color-inverse);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.claim-button {
+  display: flex;
+  width: 348px;
+  height: 40px;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 48px;
+  background: var(--button-surface);
+  position: absolute;
+  left: 16px;
+  top: 223px;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color-inverse);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  transition: all 0.2s ease;
+}
+
+.claim-button:hover {
+  background: #961B21;
+}
+
+/* Floating Phone Button */
+.floating-phone {
+  position: absolute;
+  right: 17px;
+  bottom: 32px;
+  z-index: 1000;
+}
+
+.phone-button {
+  width: 59px;
+  height: 59px;
+  border-radius: 50%;
+  border: 1px solid var(--icon-color-fab-icon);
+  background: var(--background-yellow-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.phone-button::before {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: 50%;
+  background: var(--icon-color-fab-stroke);
+  z-index: 1;
+}
+
+.phone-button::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border-radius: 50%;
+  background: var(--background-yellow-gradient);
+  z-index: 2;
+}
+
+.phone-button svg {
+  position: relative;
+  z-index: 3;
+}
+
+
+
+
+

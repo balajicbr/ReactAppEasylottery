@@ -1,0 +1,96 @@
+.purchaseOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.purchaseModal {
+  background: #ffffff;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.purchaseModal img {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.purchaseModal .closeBtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.couponBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px dashed #cccccc;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+
+.couponBox .couponText {
+  font-size: 14px;
+  word-break: break-all;
+}
+
+.couponBox .couponAction {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.termsText {
+  font-size: 14px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+
+}
+
+.alertModal {
+  background-color: white;
+  border-radius: 12px;
+  width: 350px;
+}
+
+.termsText a {
+  color: #d32f2f;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.confirmBtn {
+  background-color: #b71c1c;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 75%;
+  margin-bottom: 25px;
+  margin-left: 40px;
+}

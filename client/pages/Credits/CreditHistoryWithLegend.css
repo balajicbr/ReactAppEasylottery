@@ -1,0 +1,797 @@
+/* CreditHistoryWithLegend.css - Credit History page with legend visible */
+
+/* Import Spline Sans font */
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;600;700&display=swap');
+
+/* CSS Variables */
+:root {
+  --background-page-bg: #FFF;
+  --background-purple-light: #F6F0FF;
+  --background-purple-mid: #E5D8F9;
+  --text-color-headline: #270659;
+  --text-color-body: #53426C;
+  --background-card: #FFF;
+  --background-grey: #F4F4F3;
+  --background-yellow-light: #FFF1D1;
+  --border-color-line-dark-outline: #CBC9CF;
+  --border-color-outline-hover: #270659;
+  --border-color-line-mid: #E1DFE5;
+  --background-blue-light: #D6E7FF;
+  --icon-color-fab-icon: #181823;
+  --background-yellow-gradient: linear-gradient(95deg, #F9B42B 1.83%, #FED604 106.56%);
+  --icon-color-fab-stroke: linear-gradient(142deg, #35338A 9.52%, #403BB3 90.48%);
+  --text-color-mobile-menu: #6A538D;
+  --mobile-menu-default-primary-menu-icon-bg-3: #35338A;
+  --mobile-menu-default-primary-menu-icon-bg-1: #201E5B;
+  --mobile-menu-default-primary-menu-icon-bg-2: linear-gradient(140deg, #302E71 9.94%, #2F2B86 91.52%);
+  --mobile-menu-default-primary-menu-icon-border: #000;
+}
+
+/* Main container */
+.credit-history-with-legend-container {
+  display: flex;
+  width: 412px;
+  height: 881px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  background: var(--background-page-bg);
+  position: relative;
+  margin: 0 auto;
+  font-family: 'Spline Sans', -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+/* Background blur effect */
+.background-blur {
+  width: 661px;
+  height: 839px;
+  position: absolute;
+  left: -143px;
+  top: 0;
+  border-radius: 50%;
+  opacity: 0.2;
+  background: #CEB0FF;
+  filter: blur(115.35px);
+  z-index: 0;
+}
+
+/* Header */
+.credits-header {
+  display: flex;
+  width: 412px;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--background-purple-light);
+  position: relative;
+  z-index: 1;
+}
+
+.header-content {
+  display: flex;
+  height: 64px;
+  padding: 17.5px 16px;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+  width: 100%;
+}
+
+.logo {
+  width: 222px;
+  height: 34px;
+  flex-shrink: 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.credit-balance-badge {
+  display: flex;
+  padding: 6px 12px;
+  align-items: center;
+  gap: 4px;
+  border-radius: 40px;
+  background: var(--background-purple-mid);
+}
+
+.coin-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.credit-amount {
+  color: var(--text-color-headline);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.notification-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Main Content */
+.credits-main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 26px;
+  align-self: stretch;
+  position: relative;
+  z-index: 1;
+}
+
+/* Tab Navigation */
+.tab-navigation {
+  display: flex;
+  width: 380px;
+  height: 44px;
+  padding: 4px;
+  align-items: center;
+  gap: 10px;
+  margin: 16px;
+  border-radius: 8px;
+  background: var(--background-card);
+  box-shadow: 0 1px 3px 0 rgba(16, 24, 40, 0.10), 0 1px 2px 0 rgba(16, 24, 40, 0.06);
+}
+
+.tab-button {
+  display: flex;
+  padding: 9px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color-body);
+  font-family: 'Spline Sans';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  transition: all 0.2s ease;
+}
+
+.tab-button.active {
+  background: var(--background-purple-mid);
+  color: var(--text-color-headline);
+  padding: 8px 16px;
+}
+
+/* History Content */
+.history-content {
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  margin: 0 16px;
+  align-self: stretch;
+  border-radius: 16px;
+  background: var(--background-card);
+  box-shadow: 0 4px 8px 0 rgba(16, 24, 40, 0.10), 0 2px 4px 0 rgba(16, 24, 40, 0.06);
+}
+
+/* History Tabs (Credits/Debits) */
+.history-tabs {
+  display: flex;
+  width: 348px;
+  align-items: center;
+  border-bottom: 1px solid rgba(39, 6, 89, 0.10);
+}
+
+.history-tab {
+  display: flex;
+  width: 174px;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--text-color-headline);
+  font-family: 'Spline Sans';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  transition: all 0.2s ease;
+}
+
+.history-tab.active {
+  border-bottom: 3px solid var(--text-color-headline);
+  font-weight: 600;
+}
+
+/* Total Amount Section */
+.total-amount-section {
+  display: flex;
+  padding: 12px;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  border-radius: 8px;
+  background: var(--background-grey);
+}
+
+.total-amount-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.total-amount {
+  align-self: stretch;
+  color: var(--text-color-headline);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.total-label {
+  height: 17px;
+  align-self: stretch;
+  color: var(--text-color-body);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.legend-toggle {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.toggle-switch {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-switch.active svg {
+  opacity: 1;
+}
+
+.legend-label {
+  color: var(--text-color-headline);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+/* Legend Section */
+.legend-section {
+  display: flex;
+  width: 349px;
+  padding: 0 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 8px;
+  border: 1px solid var(--border-color-line-mid);
+  background: var(--background-yellow-light);
+  animation: legendSlideIn 0.3s ease-out;
+}
+
+@keyframes legendSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.legend-item {
+  display: flex;
+  padding: 12px 0;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-bottom: 1px solid transparent;
+}
+
+.legend-item:not(:last-child) {
+  border-bottom: none;
+}
+
+.legend-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.legend-text {
+  flex: 1 0 0;
+  color: var(--text-color-headline);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+/* Search and Filter Section */
+.search-filter-section {
+  display: flex;
+  width: 348px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.search-filter-section > div:first-child {
+  display: flex;
+  height: 40px;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.search-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  flex: 1 0 0;
+  background: var(--background-card);
+}
+
+.search-input-wrapper > div {
+  display: flex;
+  padding: 8px 12px 8px 16px;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid var(--border-color-line-dark-outline);
+  background: var(--background-card);
+  box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+}
+
+.search-input {
+  flex: 1 0 0;
+  color: var(--text-color-body);
+  font-family: 'Spline Sans';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.search-input::placeholder {
+  color: var(--text-color-body);
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.filter-button {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--text-color-headline);
+  background: var(--background-card);
+  box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-button:hover {
+  background: var(--background-purple-light);
+}
+
+/* Transaction Table */
+.transaction-table {
+  width: 348px;
+  height: 138px;
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid var(--border-color-line-mid);
+  background: var(--background-card);
+}
+
+.table-header {
+  display: flex;
+  width: 348px;
+  align-items: center;
+  height: 46px;
+}
+
+.header-cell {
+  display: flex;
+  height: 46px;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--background-blue-light);
+  color: var(--text-color-headline);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.header-cell.type-column {
+  width: 76px;
+  flex-shrink: 0;
+  border-radius: 8px 0 0 0;
+}
+
+.header-cell.amount-column {
+  width: 115px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.header-cell.date-column {
+  width: 158px;
+  flex-shrink: 0;
+  border-radius: 0 8px 0 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.sort-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.table-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-row {
+  display: flex;
+  width: 348px;
+  align-items: center;
+  height: 46px;
+  border-bottom: 1px solid var(--border-color-line-mid);
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-cell {
+  display: flex;
+  height: 46px;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--text-color-headline);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.table-cell.type-cell {
+  width: 76px;
+  flex-shrink: 0;
+}
+
+.table-cell.amount-cell {
+  width: 115px;
+  flex-shrink: 0;
+}
+
+.table-cell.date-cell {
+  width: 158px;
+  flex-shrink: 0;
+}
+
+/* Bottom Navigation */
+.bottom-navigation {
+  display: flex;
+  width: 412px;
+  height: 80px;
+  align-items: center;
+  position: relative;
+  background: var(--background-card);
+  border-radius: 0 0 0 0;
+  margin-top: auto;
+}
+
+.bottom-navigation::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(270deg, rgba(255, 146, 17, 0.08) 0%, #FF9211 49.66%, rgba(255, 146, 17, 0.08) 100%);
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  flex: 1 0 0;
+  align-self: stretch;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-item.buy-ticket {
+  position: relative;
+}
+
+.buy-ticket-icon {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 0.678px solid var(--mobile-menu-default-primary-menu-icon-bg-3);
+  background: var(--mobile-menu-default-primary-menu-icon-bg-1);
+  position: relative;
+}
+
+.buy-ticket-icon::before {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: 50%;
+  background: var(--mobile-menu-default-primary-menu-icon-bg-2);
+}
+
+.buy-ticket-icon svg {
+  position: relative;
+  z-index: 1;
+}
+
+.nav-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.nav-label {
+  color: var(--text-color-mobile-menu);
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.nav-label.active {
+  color: var(--text-color-mobile-menu);
+  font-weight: 600;
+}
+
+/* Floating Phone Button */
+.floating-phone {
+  position: absolute;
+  right: 17px;
+  bottom: 80px;
+  z-index: 1000;
+}
+
+.phone-button {
+  width: 59px;
+  height: 59px;
+  border-radius: 50%;
+  border: 1px solid var(--icon-color-fab-icon);
+  background: var(--background-yellow-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.phone-button::before {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: 50%;
+  background: var(--icon-color-fab-stroke);
+  z-index: 1;
+}
+
+.phone-button::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border-radius: 50%;
+  background: var(--background-yellow-gradient);
+  z-index: 2;
+}
+
+.phone-button svg {
+  position: relative;
+  z-index: 3;
+}
+
+/* Responsive Design */
+@media (max-width: 412px) {
+  .credit-history-with-legend-container {
+    width: 100vw;
+  }
+
+  .credits-header {
+    width: 100%;
+  }
+
+  .tab-navigation,
+  .history-content {
+    width: calc(100% - 32px);
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .history-tabs,
+  .search-filter-section,
+  .transaction-table,
+  .legend-section {
+    width: calc(100% - 32px);
+  }
+
+  .bottom-navigation {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .legend-section {
+    width: calc(100% - 16px);
+  }
+}
+
+@media (min-width: 768px) {
+  .credit-history-with-legend-container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .credit-history-with-legend-container {
+    max-width: 1024px;
+  }
+}
+
+/* Animation for page appearance */
+@keyframes pageSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.credit-history-with-legend-container {
+  animation: pageSlideIn 0.3s ease-out;
+}
+
+/* Ensure proper stacking order */
+.credit-history-with-legend-container {
+  z-index: 10;
+}
+
+/* Form interactions */
+.tab-button:focus,
+.history-tab:focus,
+.search-input:focus,
+.filter-button:focus {
+  outline: 2px solid var(--text-color-headline);
+  outline-offset: 2px;
+}
+
+/* Hover effects */
+.nav-item:hover .nav-label {
+  color: var(--text-color-headline);
+}
+
+.legend-toggle:hover {
+  opacity: 0.8;
+}
+
+.history-tab:hover {
+  background: rgba(39, 6, 89, 0.05);
+}
+
+.legend-item:hover {
+  background: rgba(39, 6, 89, 0.02);
+  border-radius: 4px;
+}
+
+/* Table hover effects */
+.table-row:hover {
+  background: rgba(39, 6, 89, 0.02);
+}
+
+/* Toggle switch styling for "with legend" state - toggle is active */
+.toggle-switch svg {
+  opacity: 1;
+}
+
+.toggle-switch.active svg {
+  opacity: 1;
+}
+
+/* Additional legend styling for better visual hierarchy */
+.legend-section {
+  margin-top: 0;
+}
+
+.legend-item {
+  transition: background-color 0.2s ease;
+}
+
+.legend-icon {
+  margin-right: 0;
+}
+
+/* Enhanced accessibility */
+.legend-toggle {
+  outline: none;
+  border-radius: 4px;
+}
+
+.legend-toggle:focus {
+  outline: 2px solid var(--text-color-headline);
+  outline-offset: 2px;
+}
+
+/* Improved legend spacing */
+.legend-item:first-child {
+  padding-top: 12px;
+}
+
+.legend-item:last-child {
+  padding-bottom: 12px;
+}
+
+/* Smooth transitions */
+.legend-section,
+.legend-item {
+  transition: all 0.2s ease;
+}
+
+/* Legend appears with smooth animation */
+.legend-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.legend-section.hide {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+}

@@ -1,0 +1,509 @@
+/* MyWinsClaimPrizeFinishedUpload.css - Modal overlay design for finished upload */
+
+/* Import Spline Sans font */
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;600;700&display=swap');
+
+/* CSS Variables */
+:root {
+  --neutrals-black: #000;
+  --text-color-headline: #270659;
+  --text-color-body: #53426C;
+  --button-surface: #AD1E24;
+  --text-color-inverse: #FFF;
+  --background-page-bg: #FFF;
+  --background-purple-light: #F6F0FF;
+  --background-purple-mid: #E5D8F9;
+  --border-color-line-two: #E3E3E3;
+  --border-color-line-mid: #E1DFE5;
+  --background-card: #FFF;
+  --background-yellow-gradient: linear-gradient(95deg, #F9B42B 1.83%, #FED604 106.56%);
+}
+
+/* Main container */
+.claim-prize-finished-upload-container {
+  display: flex;
+  width: 412px;
+  height: 917px;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  margin: 0 auto;
+  font-family: 'Spline Sans', -apple-system, Roboto, Helvetica, sans-serif;
+  overflow: hidden;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), 
+              url('https://api.builder.io/api/v1/image/assets/TEMP/6cae6d8d4388e30f4901587961176e0404804c29?width=824') lightgray 50% / cover no-repeat;
+}
+
+/* Background page (blurred) */
+.background-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(2px);
+  z-index: 1;
+}
+
+.background-blur {
+  width: 661px;
+  height: 839px;
+  position: absolute;
+  left: -125px;
+  top: 0;
+  border-radius: 50%;
+  opacity: 0.2;
+  background: #CEB0FF;
+  filter: blur(115.35px);
+  z-index: 0;
+}
+
+/* Page wrapper for background */
+.page-wrapper {
+  display: flex;
+  width: 412px;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--background-purple-light);
+  position: relative;
+  z-index: 1;
+}
+
+/* Header for background */
+.header {
+  display: flex;
+  height: 64px;
+  padding: 17.5px 16px;
+  align-items: center;
+  align-self: stretch;
+}
+
+.header-content {
+  display: flex;
+  width: 380px;
+  align-items: center;
+  gap: 12px;
+}
+
+.back-button {
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-title {
+  color: var(--text-color-headline);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  margin: 0;
+}
+
+/* Winner Banner for background */
+.winner-banner {
+  display: flex;
+  width: 380px;
+  height: 174px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 12px;
+  position: relative;
+  z-index: 1;
+  margin: 0 16px;
+}
+
+.banner-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: -6px;
+  align-self: stretch;
+  border-radius: 12px 12px 0 0;
+  position: relative;
+}
+
+.celebration-blur {
+  width: 235.328px;
+  height: 140.624px;
+  position: absolute;
+  left: 67.407px;
+  top: -99.558px;
+  filter: blur(2px);
+  z-index: 1;
+}
+
+.winner-banner-bg {
+  height: 120px;
+  align-self: stretch;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 1px 3px 0 rgba(16, 24, 40, 0.10), 0 1px 2px 0 rgba(16, 24, 40, 0.06);
+  position: relative;
+  z-index: 2;
+}
+
+.banner-footer {
+  display: flex;
+  padding: 4px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 0 0 8px 8px;
+  background: var(--background-yellow-gradient);
+  position: relative;
+}
+
+.confetti-left, .confetti-right {
+  width: 38px;
+  height: 45.524px;
+}
+
+.congratulations-text {
+  color: var(--text-color-headline);
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+/* Background content */
+.background-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.prize-details-card {
+  display: flex;
+  width: 381px;
+  padding: 14px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  border-radius: 12px;
+  background: var(--background-purple-mid);
+}
+
+.details-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  min-width: 66px;
+}
+
+.detail-label {
+  color: var(--text-color-body);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+}
+
+.detail-value {
+  color: var(--text-color-headline);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+}
+
+.claim-form-section {
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+  border-radius: 16px;
+  border: 1px solid var(--border-color-line-two);
+  background: var(--background-card);
+  box-shadow: 0 1px 4px 0 rgba(73, 39, 126, 0.15);
+}
+
+.uploaded-file-display {
+  display: flex;
+  padding: 8px 16px 8px 8px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid #E1DFE5;
+  background: var(--background-card);
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pdf-icon {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.file-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.file-name {
+  color: var(--text-color-headline);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.file-size {
+  color: var(--text-color-body);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.remove-file-btn {
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-button {
+  display: flex;
+  height: 40px;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 48px;
+  border: none;
+  cursor: pointer;
+  background: var(--button-surface);
+  color: var(--text-color-inverse);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 257px 14px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  z-index: 100;
+}
+
+.modal-content {
+  display: flex;
+  width: 382px;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+/* Modal Header with gradient background */
+.modal-header {
+  position: relative;
+  height: 179px;
+  align-self: stretch;
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gradient-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 1.117px 3.908px 0 rgba(0, 0, 0, 0.25);
+}
+
+.success-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 105px;
+  height: 105px;
+  z-index: 2;
+}
+
+.close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: background 0.2s ease;
+}
+
+.close-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Modal Body */
+.modal-body {
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+  border-radius: 0 0 16px 16px;
+  background: #FFF;
+}
+
+.modal-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.modal-title {
+  align-self: stretch;
+  color: var(--text-color-headline);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  margin: 0;
+}
+
+.modal-description {
+  color: var(--text-color-body);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0;
+}
+
+.update-kyc-button {
+  display: flex;
+  height: 40px;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 48px;
+  background: var(--button-surface);
+  border: none;
+  cursor: pointer;
+  color: var(--text-color-inverse);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  transition: all 0.2s ease;
+}
+
+.update-kyc-button:hover {
+  background: #961B21;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(173, 30, 36, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 412px) {
+  .claim-prize-finished-upload-container {
+    width: 100vw;
+  }
+
+  .background-page {
+    width: 100vw;
+  }
+
+  .modal-overlay {
+    width: 100vw;
+    padding: 257px 14px;
+  }
+
+  .modal-content {
+    width: calc(100vw - 28px);
+    max-width: 382px;
+  }
+}
+
+@media (min-width: 768px) {
+  .claim-prize-finished-upload-container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .claim-prize-finished-upload-container {
+    max-width: 1024px;
+  }
+}
+
+/* Animation for modal appearance */
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-content {
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+/* Ensure proper stacking order */
+.claim-prize-finished-upload-container {
+  z-index: 1000;
+}

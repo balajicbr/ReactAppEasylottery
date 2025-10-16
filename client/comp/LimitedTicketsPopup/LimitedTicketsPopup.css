@@ -1,0 +1,82 @@
+/* .limitedOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2200; 
+}
+
+.limitedModal {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 400px;
+  text-align: center;
+} */
+
+.limitedOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2200;
+}
+
+.limitedPopup {
+  background: #fff;
+  border-radius: 20px;
+  width: 350px;
+  text-align: center;
+  position: relative;
+}
+
+.limitedImage {
+  width: 100%;
+  height: 179px;
+  margin-bottom: 15px;
+  border-start-start-radius: 12px;
+  border-start-end-radius: 12px;
+}
+
+.limitedMessage {
+  font-size: 16px;
+  color: #333;
+  margin: 0 15px 20px;
+}
+
+.limitedButtonGroup {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 15px 20px;
+}
+
+.limitedBtn {
+  flex: 1;
+  height: 40px;
+  border: none;
+  border-radius: 48px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.limitedBtn.cancel {
+  background-color: #777;
+  color: #fff;
+}
+
+.limitedBtn.confirm {
+  background-color: #B13F3A;
+  color: #fff;
+}

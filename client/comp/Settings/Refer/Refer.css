@@ -1,0 +1,46 @@
+.refer-container {
+    padding: 10px;
+    width: 100%;
+    color: #270659;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.refer-title{
+    padding: 10px;
+    width: 100%;
+    color: #270659;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    font-family: sans-serif;
+    line-height: 32px;
+}
+.refer-sub-title .refer-code{
+    padding: 10px;
+    width: 100%;
+    color: #270659;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+.refer-details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.refer-image-wrapper {
+    margin-top: 10px;
+}
+
+.refer-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}

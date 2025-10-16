@@ -1,0 +1,109 @@
+/* .headermain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f4ff; 
+  padding: 10px 20px;
+} */
+.headermain {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f4ff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+.header-logo img {
+  height: 40px;
+}
+
+.user-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #d3b5ff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  font-size: 16px;
+}
+
+.header-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Balance box */
+.header-balance {
+  display: flex;
+  align-items: center;
+  background: #f1eaff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #5c2ca0;
+}
+
+.coin-icon {
+  margin-right: 6px;
+  color: gold;
+}
+
+/* Notification button */
+.notification-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #5c2ca0;
+  cursor: pointer;
+}
+
+.notification-btn:hover {
+  color: #8b42d7;
+}
+
+
+.user-menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+
+.user-dropdown {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  min-width: 150px;
+}
+
+.user-dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.user-dropdown li {
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.user-dropdown li:hover {
+  background-color: #f0f0f0;
+}
+

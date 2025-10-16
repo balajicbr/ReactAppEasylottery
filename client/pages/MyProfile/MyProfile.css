@@ -1,0 +1,349 @@
+.main-container{
+    display: flex;
+    width: 100%;
+    height: fit-content !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    border-radius: 24px 24px 0 0;
+    color: #ffffff;
+    position: relative;
+    flex: 1;
+    min-height: 600px;
+}
+.back-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding: 12px 16px;
+    border-bottom: 1px solid #ccc;
+    z-index: 999;
+}
+.user-contact ,.user-dob{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.back-arrow i {
+    cursor: pointer;
+    color: #2e236c;
+}
+
+.back-text {
+    flex-grow: 1;
+    text-align: start;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.edit-icon {
+    cursor: pointer;
+    color: #2e236c;
+}
+.warning-header {
+    background: linear-gradient(90deg, #F9B42B 0%, #FED604 100%);
+    min-height: 60px;
+    padding: 16px;
+    margin: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #000;
+    /* or another color for better contrast */
+    font-size: 14px;
+    font-weight: 500;
+}
+.Profile-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #ffffff;;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.profile-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #461099, #270659);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.profile-name {
+    font-size: 20px;
+    font-weight: 500;
+    color: #270659;
+}
+.profile-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #270659;
+    font-size: 14px;
+    font-weight: 400;
+}
+.Profile-Details-card {
+    background-color: #ffffff;
+    padding: 16px;
+    border-radius: 8px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.kyc-heading {
+    font-size: 16px;
+    font-weight: 600;
+    color: #270659;
+    text-align: left;
+    margin-bottom: 12px;
+}
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin: 8px 0 16px 0;
+}
+.kyc-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.kyc-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.kyc-icon {
+    width: 40px;
+    height: 40px;
+    background:#d0c2e5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.kyc-texts {
+    display: flex;
+    flex-direction: column;
+}
+
+.kyc-title {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color:#2e236c;
+}
+
+.kyc-subtext {
+    margin: 2px 0 0;
+    font-size: 13px;
+    color:#270659;
+}
+
+.kyc-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.kyc-label {
+    width: 120px;
+    font-size: 14px;
+    font-weight: 700;
+    color:#270659;
+}
+.kyc-fields{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.kyc-field-row {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+.kyc-data-value {
+    font-size: 14px;
+    color:#270659;
+    flex: 1;
+}
+.image-row {
+    display: flex;
+    gap: 12px;
+}
+
+.image-placeholder {
+    width: 170px;
+    height: 100px;
+    background-color: #eee;
+    border: 1px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #777;
+    border-radius: 6px;
+}
+.delete-account-btn {
+    margin: 20px auto;
+    display: block;
+    padding: 10px 20px;
+    width: 340px;
+    background-color: transparent;
+    color: #AD1E24;
+    border: 1px solid #AD1E24;
+    border-radius: 31px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.delete-account-btn:hover {
+    background-color: #AD1E24;
+    color: white;
+}
+
+.delete-account-btn-empty{
+    margin: 20px auto;
+    display: block;
+    color: transparent;
+    border:transparent;
+}
+.kyc-image {
+    width: 120px;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+    margin: 8px;
+    border: 1px solid #ccc;
+}
+.image-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.image-popup-content {
+    position: relative;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.image-popup-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 6px;
+}
+
+.close-popup {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #fff;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    color: #000;
+}
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #270659;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+    color: #270659;
+}
+.spinner-text{
+    color: #270659;
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.delete-modal-title{
+    align-self: center;
+    color: #270659;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    margin: 0;
+}
+.form-group {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-group-text {
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #270659;
+
+}
+.modal-body {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    align-self: stretch;
+    border-radius: 0 0 16px 16px;
+    background: #FFF;
+    text-align: center;
+}
+.delete-modal-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    align-self: stretch;
+}

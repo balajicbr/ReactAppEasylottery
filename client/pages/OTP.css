@@ -1,0 +1,406 @@
+/* CSS Variables based on Figma */
+:root {
+  --border-color-line-mid: #E1DFE5;
+  --text-color-headline: #270659;
+  --text-color-body: #53426C;
+  --brand-maroon: #AD1E24;
+  --border-color-line-dark-outline: #CBC9CF;
+  --button-disable: #D1BBBC;
+  --text-color-inverse: #FFF;
+}
+
+/* Main Container */
+.otp-verification {
+  width: 412px;
+  height: 917px;
+  background: #FFF;
+  position: relative;
+  max-width: 100vw;
+  margin: 0 auto;
+  overflow: hidden;
+  font-family: 'Spline Sans', -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+/* Background Image */
+.background-container {
+  position: absolute;
+  left: 1px;
+  top: 0px;
+  width: 411px;
+  height: 238px;
+  flex-shrink: 0;
+}
+
+.background-image {
+  width: 411px;
+  height: 238px;
+  flex-shrink: 0;
+  aspect-ratio: 411/238;
+  object-fit: cover;
+}
+
+/* Logo */
+.logo-container {
+  position: absolute;
+  left: 95px;
+  top: 57px;
+  z-index: 10;
+}
+
+.logo {
+  width: 222px;
+  height: 44px;
+  flex-shrink: 0;
+  aspect-ratio: 111/22;
+  object-fit: contain;
+}
+
+/* Main Content Card */
+.main-content-card {
+  display: flex;
+  width: 412px;
+  height: 681px;
+  padding: 16px 16px 24px 16px;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+  border-radius: 24px 24px 16px 16px;
+  background: #FFF;
+  box-shadow: 0 4px 8px 0 rgba(16, 24, 40, 0.10), 0 2px 4px 0 rgba(16, 24, 40, 0.06);
+  position: absolute;
+  left: 0px;
+  top: 190px;
+}
+
+.card-handle {
+  width: 81px;
+  height: 4px;
+  flex-shrink: 0;
+  border-radius: 32px;
+  background: var(--border-color-line-mid);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+}
+
+/* Header Section */
+.header-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  align-self: stretch;
+}
+
+.back-button {
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.back-button:hover {
+  transform: scale(1.1);
+}
+
+.page-title {
+  color: var(--text-color-headline);
+  font-family: 'Spline Sans', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  margin: 0;
+  text-align: center;
+  flex: 1;
+}
+
+.subtitle-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.subtitle {
+  width: 256px;
+  color: var(--text-color-body);
+  text-align: center;
+  font-family: 'Spline Sans', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0;
+}
+
+.edit-button {
+  width: 20px;
+  height: 20px;
+  aspect-ratio: 1/1;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  right: -118px;
+  bottom: -2px;
+  transition: transform 0.2s ease;
+}
+
+.edit-button:hover {
+  transform: scale(1.1);
+}
+
+/* OTP Input Section */
+.otp-input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+}
+
+.otp-inputs-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  align-self: stretch;
+}
+
+.otp-inputs {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.otp-box {
+  width: 48px;
+  height: 48px;
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid var(--border-color-line-dark-outline);
+  background: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.otp-box.filled {
+  border: 1px solid var(--brand-maroon);
+}
+
+.otp-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  text-align: center;
+  color: var(--text-color-headline);
+  font-family: 'Spline Sans', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  outline: none;
+}
+
+.resend-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+}
+
+.resend-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: var(--text-color-headline);
+  font-family: 'Spline Sans', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.resend-text {
+  color: var(--text-color-body);
+  font-family: 'Spline Sans', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.resend-link {
+  color: var(--text-color-headline);
+  font-family: 'Spline Sans', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  transition: color 0.2s ease;
+}
+
+.resend-link:hover {
+  color: var(--brand-maroon);
+}
+
+/* Verify Button */
+.verify-button {
+  display: flex;
+  height: 48px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 48px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.verify-button.enabled {
+  background: var(--brand-maroon);
+}
+
+.verify-button.disabled {
+  background: var(--button-disable);
+  cursor: not-allowed;
+}
+
+.verify-button:hover.enabled {
+  background: #8B1820;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(173, 30, 36, 0.3);
+}
+
+.button-text {
+  color: var(--text-color-inverse);
+  font-family: 'Spline Sans', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .otp-verification {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .background-container {
+    width: 100%;
+    left: 0;
+  }
+  
+  .background-image {
+    width: 100%;
+  }
+  
+  .main-content-card {
+    width: 100%;
+  }
+  
+  .logo-container {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .otp-verification {
+    max-width: 480px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (min-width: 769px) {
+  .otp-verification {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Focus States */
+.otp-input:focus {
+  outline: none;
+}
+
+.otp-box:focus-within {
+  border-color: var(--brand-maroon);
+  box-shadow: 0 0 0 2px rgba(173, 30, 36, 0.1);
+}
+
+/* Loading States */
+.verify-button:disabled {
+  background: var(--button-disable);
+  opacity: 0.7;
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .main-content-card {
+    border: 2px solid #000;
+  }
+  
+  .otp-box {
+    border: 2px solid #000;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Animation for OTP boxes when filled */
+@keyframes otpFilled {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.otp-box.filled {
+  animation: otpFilled 0.2s ease-in-out;
+}
