@@ -2,7 +2,7 @@ import React ,{useRef}from 'react';
 import { useSelector } from "react-redux"; 
 import { jsPDF } from 'jspdf';
 import { toast } from "react-toastify";
-import './DownloadClaimPdfForm.css';
+import './DownLoadClaimPdfForm.css';
 import axios from "axios";
 const DownloadClaimPdfForm = ({schemeid}) => {
 const user = useSelector((state) => state.auth.user.user);

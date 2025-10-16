@@ -93,24 +93,6 @@ const BuyTickets = () => {
     }
   };
   
-  const output = {
-    "json": {
-        "tickets": "11698",
-        "lottery_id": "E00690",
-        "transation_id": "254201",
-        "is_free": 0,
-        "available_credit": 110,
-        "transactions": 1
-    },
-        "json": {
-        "tickets": "11699",
-        "lottery_id": "E00690",
-        "transation_id": "254201",
-        "is_free": 0,
-        "available_credit": 110,
-        "transactions": 1
-    },
-}
   // ✅ Fetch all schemes
   useEffect(() => {
     const fetchSchemes = async () => {
