@@ -283,7 +283,7 @@ const handleAadharChange = (e) => {
                                 {aadhaarBack ? (
                                     <div className="image-row">
                                     <img className="kyc-image-edit" src={aadhaarBack} alt="Aadhaar Front" onClick={() => setSelectedImage(aadhaarBack)} />
-                                    <i className="fas fa-trash " style={{ fontSize: '18px', margin:"7px" ,fontSize: '20px',color:'#AD1E24'}} onClick={() => setAadhaarBack('')}></i>
+                                    <i className="fas fa-trash " style={{  margin:"7px" ,fontSize: '20px',color:'#AD1E24'}} onClick={() => setAadhaarBack('')}></i>
                                     </div>
                                 ) : (
                                 <div className="image-upload-box">
@@ -314,7 +314,7 @@ const handleAadharChange = (e) => {
                                 {panFront ? (
                                     <div className="image-row">
                                     <img className="kyc-image-edit" src={panFront} alt="Aadhaar Front" onClick={() => setSelectedImage(panFront)} />
-                                    <i className="fas fa-trash " style={{ fontSize: '18px', margin:"7px" ,fontSize: '20px',color:'#AD1E24'}} onClick={() => setPanFront('')}></i>
+                                    <i className="fas fa-trash " style={{ fontSize: '18px', margin:"7px",color:'#AD1E24'}} onClick={() => setPanFront('')}></i>
                                     </div>
                                 ) : (
                                 <div className="image-upload-box">
@@ -362,7 +362,7 @@ const handleAadharChange = (e) => {
                                 {panBack ? (
                                     <div className="image-row">
                                     <img className="kyc-image-edit" src={panBack} alt="Aadhaar Front" onClick={() => setSelectedImage(panBack)} />
-                                    <i className="fas fa-trash " style={{ fontSize: '18px', margin:"7px" ,fontSize: '20px',color:'#AD1E24'}} onClick={() => setPanBack('')}></i>
+                                    <i className="fas fa-trash " style={{ fontSize: '18px', margin:"7px" ,color:'#AD1E24'}} onClick={() => setPanBack('')}></i>
                                     </div>
                                 ) : (
                                 <div className="image-upload-box">
