@@ -22,7 +22,7 @@
 
 import React from "react";
 import "./LimitedTicketsPopup.css";
-import ImBuy from "../../assets/Im_buy.jpg";
+import {ImBuy} from "../../assets/Im_Buy.jpg"
 
 const LimitedTicketsPopup = ({ availableCount,requestedCount, onCancel, onConfirm }) => {
   console.log("count, cancel and conConfirm are",availableCount,requestedCount, onCancel, onConfirm );
