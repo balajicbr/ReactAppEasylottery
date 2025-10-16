@@ -1,7 +1,6 @@
 import React from "react";
 import "./AlertPopup.css";
-import ImBuy from "../../assets/Im_buy.jpg"; 
-
+import ImBuy from "../../assets/Im_Buy.jpg"; 
 const AlertPopup = ({ message, onClose }) => {
   //console.log("onclose: ", onClose);
   return (
