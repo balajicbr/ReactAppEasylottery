@@ -28,7 +28,7 @@
 
 import React from "react";
 import "./BalancePopup.css";
-import {ImBuy} from "../../assets/Im_Buy.jpg"
+import ImBuy from "../../assets/Im_Buy.jpg"
 
 const BalancePopup = ({ onClose, onAddCredit }) => {
   return (
