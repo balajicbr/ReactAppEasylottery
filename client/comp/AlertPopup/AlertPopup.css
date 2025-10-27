@@ -36,7 +36,7 @@
   /* padding: 20px; */
   border-radius: 20px;
   /* width: 350px; */
-  height: 327px;
+  height: auto;
 
   text-align: start;
   position: relative;
@@ -83,8 +83,14 @@
   font-weight: 500;
   margin-left: 40px;
   z-index: 10001;
+  margin: 10px;
 }
 
 .okBtn:hover {
   background-color: #a83232;
+}
+.button-div{
+      align-items: center;
+        justify-content: center;
+        display: flex;
 }

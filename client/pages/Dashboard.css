@@ -26,7 +26,7 @@
 
 @media (max-width: 991px) {
   .dashboard-bg-gradient {
-    top: -1px;
+    /* top: -1px; */
     height: 560px;
   }
 }
@@ -35,6 +35,7 @@
   .dashboard-bg-gradient {
     height: 650px;
     top: -50px;
+    width: 100%;
   }
 }
 
@@ -133,16 +134,24 @@
 }
 
 .live-results-btn {
-  @apply flex items-center gap-2 px-4 py-2 bg-[#AD1E24] rounded-[50px] h-9;
+  background-color: #AD1E24;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 177px;
+  height: 36px;
+  padding: 8px 16px;
+  align-items: center;
+  border-radius: 50px;
+  /* @apply flex items-center gap-2 px-4 py-2 bg-[#AD1E24] rounded-[50px] h-9; */
 }
 
 .live-results-btn span {
-  @apply text-sm font-semibold text-white;
+  color: #FFFFFF;
+  font-weight: 200;font-size: 14px;
 }
 
-.live-results-btn svg {
-  @apply w-6 h-6;
-}
+
 
 /* Stats Section */
 .stats-section {
@@ -283,32 +292,38 @@
 }
 
 .promo-carousel {
+  position: relative;
   width: 100%;
-  height: 140px;
+  max-width: 600px;
+  margin: 0 auto;
   border-radius: 12px;
   overflow: hidden;
 }
 
+/* Ensure images fill the swiper area */
 .promo-slide-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 120px;
+  display: block;
   border-radius: 12px;
 }
 
-/* Center the dots below */
+/* Move bullets below the swiper area */
 .swiper-pagination {
-  bottom: 6px !important;
+  position: relative !important;
+  margin-top: 10px;
+  text-align: center;
 }
 
+/* Style bullets */
 .swiper-pagination-bullet {
-  background: #999 !important;
-  opacity: 0.6;
+  background: #270659;
+  opacity: 0.8;
+  margin: 0 4px !important;
 }
 
 .swiper-pagination-bullet-active {
   background: #270659 !important;
-  /* active dot color */
   opacity: 1;
 }
 
@@ -377,12 +392,12 @@
 /* Tickets Section */
 .tickets-section {
   @apply w-full flex flex-col gap-4;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 @media (max-width: 991px) {
   .tickets-section {
-    margin-top: 40px;
+    margin-top: 20;
   }
 }
 
@@ -413,7 +428,6 @@
   overflow-x: auto;
   gap: 12px;
   padding-bottom: 10px;
-  /* Hide scrollbar */
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -444,8 +458,7 @@
 .tickets-tabs .tab.active {
   font-weight: 600;
   padding: 5px 10px;
-  border-radius: 30px;
-  background: linear-gradient(to bottom, transparent, rgba(67, 62, 200, 0.3));
+  background: linear-gradient(to bottom, transparent, rgba(67, 62, 200, 0.3)) !important;
 }
 
 .tickets-grid {
@@ -465,10 +478,16 @@
 }
 
 .ticket-card-dash {
-  @apply relative flex-shrink-0 w-[278px] h-[370px] bg-white rounded-lg border border-[#E3E3E3];
+  @apply relative flex-shrink-0 w-[278px] h-[auto] bg-white rounded-lg border border-[#E3E3E3];
   box-shadow: 0 1px 4px 0 rgba(73, 39, 126, 0.15);
+  align-items: center;
+  justify-content: center;
 }
-
+.draw-timer{
+  display: flex;
+  flex-direction: row;
+  
+}
 .ticket-image {
   @apply w-[244px] h-[244px] rounded-lg object-cover;
   margin: 16px;
@@ -483,10 +502,14 @@
 .ticket-prize-banner span {
   @apply text-base font-semibold text-white;
 }
+ .ticket-actions{
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin: 10px;
+ }
 
-.ticket-actions {
-  @apply absolute bottom-12 left-4 right-4 flex gap-3;
-}
+
 
 .prize-details-btn {
   @apply flex-1 h-9 px-4 py-2 border border-[#AD1E33] text-[#AD1E33] text-sm font-medium rounded-[30px] flex items-center justify-center;
@@ -495,8 +518,14 @@
 .buy-now-btn {
   @apply flex-1 h-9 px-4 py-2 bg-[#AD1E33] text-white text-sm font-medium rounded-[40px] flex items-center justify-center;
 }
-
 .ticket-draw-date {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+gap: 4px;
+padding:7px
+}
+/* .ticket-draw-date {
   @apply absolute bottom-4 left-4 right-4 flex justify-between items-center;
 }
 
@@ -506,7 +535,7 @@
 
 .ticket-draw-date svg {
   @apply w-5 h-5;
-}
+} */
 
 .view-all-btn {
   @apply flex items-center gap-[6px] text-base font-medium text-[#AD1E24] leading-[120%] self-center;
@@ -714,4 +743,40 @@
   .stat-card {
     @apply w-full;
   }
+}
+.highlight-btn {
+  width: 250px;
+  height: 36px;
+  background: linear-gradient(#F9B42B,#FED604);
+  /* Active gold */
+  border-radius: 50px;
+  color: #270659;
+  font-size: 14px;
+  text-align: center;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.highlight-btn:hover {
+  background: #FFC300;
+  color: #000000;
+}
+
+/* Disabled (for "NA") state */
+.highlight-btn.disabled,
+.highlight-btn:disabled {
+  background: #d3d3d3;
+  /* Grey */
+  color: #777;
+  cursor: not-allowed;
+}
+
+.highlights-container {
+  display: flex;
+  justify-content: center;
 }

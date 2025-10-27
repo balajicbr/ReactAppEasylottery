@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./PrizeDetails.css";
 import axios from "axios";
+import { z } from "zod/v4-mini";
 
 const PrizeDetails = ({ selectedId, refreshToken, onClose }) => {
   const [prizes, setPrizes] = useState([]);
@@ -11,11 +12,14 @@ const PrizeDetails = ({ selectedId, refreshToken, onClose }) => {
   const [pdfName, setPdfName] = useState("terms.pdf");
   const [loadingTerms, setLoadingTerms] = useState(false);
   const [termsError, setTermsError] = useState(null);
+  const [loading, setLoading] = useState(false);
+  
 
   useEffect(() => {
     if (!selectedId || !refreshToken) return;
 
     const fetchPrizes = async () => {
+      setLoading(true);
       try {
         const requestData = {
           refreshToken,
@@ -33,10 +37,13 @@ const PrizeDetails = ({ selectedId, refreshToken, onClose }) => {
             },
           }
         );
-
+        if (response.data) {
+        setPrizes(response.data || []);
+        setLoading(false);
+        }
         // response might be an array or object; normalize as necessary
         // your current code expects array-of-{json:...} structure
-        setPrizes(response.data || []);
+        
       } catch (err) {
         console.error("Error fetching prize details:", err);
         setPrizes([]);
@@ -126,7 +133,12 @@ const PrizeDetails = ({ selectedId, refreshToken, onClose }) => {
         </div>
 
         {/* Table */}
-        <table className="prizeTable">
+        {loading ? (
+                  <div className="loader-container" style={{alignItems:"center"}}>
+                    <div className="spinner"></div>
+                    <p className="spinner-text">Loading Prize Details...</p>
+                  </div>
+                ) :        <table className="prizeTable">
           <thead>
             <tr>
               <th>S No</th>
@@ -136,13 +148,13 @@ const PrizeDetails = ({ selectedId, refreshToken, onClose }) => {
             </tr>
           </thead>
           <tbody>
-            {prizes.length > 0 ? (
+           {prizes.length > 0 ? (
               prizes.map((p, idx) => (
                 <tr key={idx}>
                   <td>{p.json?.sno ?? idx + 1}</td>
                   <td>{p.json?.prize ?? p.json?.title ?? "-"}</td>
-                  <td>{p.json?.winners ?? "-"}</td>
-                  <td>₹{p.json?.amount ?? p.json?.amountt ?? "0"}</td>
+                  <td>{p.json?.no ?? "-"}</td>
+                  <td>₹ {Number(p.json?.amountt ?? 0).toLocaleString('en-IN')} /-</td>
                 </tr>
               ))
             ) : (
@@ -154,6 +166,8 @@ const PrizeDetails = ({ selectedId, refreshToken, onClose }) => {
             )}
           </tbody>
         </table>
+        }
+        
 
         {/* Footer: View Terms link + loading/error states */}
         <div className="termsFooter">

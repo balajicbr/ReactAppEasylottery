@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => ({
       allow: [
         "./client",
         "./shared",
-        "node_modules",   // ✅ allow toastify CSS + other libs
+        "node_modules",   
       ],
       deny: [".env", ".env.*", "*.{crt,pem}", "**/.git/**", "server/**"],
     },
