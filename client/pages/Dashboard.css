@@ -282,13 +282,18 @@
 /* Winning Section */
 .winning-section {
   position: relative;
-  /* margin-top: 2rem; */
-  margin-bottom: 2rem;
   display: flex;
   width: 100%;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 0.75rem;
+}
+.image-button{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+/* gap: 7px; */
+
 }
 
 .promo-carousel {
@@ -518,6 +523,27 @@
 .buy-now-btn {
   @apply flex-1 h-9 px-4 py-2 bg-[#AD1E33] text-white text-sm font-medium rounded-[40px] flex items-center justify-center;
 }
+
+.winning-claim-btn{
+        display: flex;
+          height: 35px;
+          width: 159px;
+          flex-grow: 1;
+          align-items: center;
+          justify-content: center;
+          border-radius: 48px;
+          --tw-bg-opacity: 1;
+          background-color: rgb(173 30 51 / var(--tw-bg-opacity, 1));
+          padding-left: 16px;
+          padding-right: 16px;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          font-size: 12px;
+          line-height: 24px;
+          font-weight: 500;
+          color: #FFFFFF;
+          margin: 10px;
+        }
 .ticket-draw-date {
 display: flex;
 flex-direction: row;
