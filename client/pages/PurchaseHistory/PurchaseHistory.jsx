@@ -318,7 +318,7 @@ const PurchaseHistory = () => {
                 {bottomSheetType === "Filter"
                   ? "Filter Options"
                   : bottomSheetType === "TicketDetails"
-                    ? "Ticket Details"
+                    ? ` ${ticketsDetails[0].name} Ticket Details`
                     : ""}
               </h3>
             </div>
@@ -405,25 +405,12 @@ const PurchaseHistory = () => {
                     }}
                   >
                     <div className="ticket-detail-row">
-                      <div
-                        style={{
-                          marginTop: "10px",
-                          color: "#270659",
-                          fontWeight: "normal",
-                          fontSize: "22px",
-                        }}
-                      >
+                      <div style={{ marginTop: "10px", color: "#270659", fontWeight: "normal", fontSize: "22px", }} >
                         <span className="value">₹ {ticket.total_amount}</span>
                       </div>
-                      <div
-                        className="ticket-count"
-                        style={{ marginRight: "20px" }}
-                      >
-                        <span className="count-label"></span>
-                        <div
-                          className="count-badge"
-                          style={{ marginRight: "10px" }}
-                        >
+                      
+                      <div className="ticket-count">
+                        <div className="count-badge">
                           <span className="count-number">{ticket.ticket}</span>
                         </div>
                       </div>

@@ -770,6 +770,12 @@
 .copy-button:focus {
   outline-offset: 2px;
 }
+.divider {
+  height: 2px;
+  background-color: #270659;
+  opacity:1;
+  margin: 0 15px;
+}
 
 /* Hover effects */
 .nav-item:hover .nav-label {

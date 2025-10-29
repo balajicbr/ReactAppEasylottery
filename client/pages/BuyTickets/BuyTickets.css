@@ -7,10 +7,74 @@
   letter-spacing: 0%;
 
 }
+.numbersList{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-height: 200px;
+  overflow-y: auto;
+  gap: 10px;
+  border-radius: 6px;
+  padding: 8px;
+  margin-top: 8px;
+}
+.numBox{
+  background-color: #E5D8F9;
+  color: #270659;
+  padding: 6px 10px;
+  border-radius: 16px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.removeBtn{
 
+font-weight: bold;}
+
+
+.custom-select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #270659;
+  color: #270659;
+  font-weight: 500;
+  font-size: 14px;
+  background-color: #ffffff;
+
+  /* Remove default dropdown styles */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* Custom arrow icon */
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23270659' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 12px);
+  background-position-y: center;
+
+  cursor: pointer;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.close-button {
+  color: #270659 !important;
+}
+.numberselect{
+  padding: 10px;
+}
+.custom-select:focus {
+  outline: none;
+  border-color: #6a2dc6;
+  box-shadow: 0 0 4px rgba(106, 45, 198, 0.4);
+}
+
+.custom-select option {
+  color: #270659;
+}
 .buyTickets {
   padding: 16px;
   margin-bottom: 65px;
+  /* background-color: #f8f3ff; */
   /* font-family: Spline Sans; */
 }
 
@@ -68,6 +132,7 @@
   margin-bottom: 15px;
   border-radius: 10px;
   box-shadow: 0px 1px 4px 0px #49277E26;
+  border: #E3E3E3 1px solid;
 }
 
 .card h4 {
@@ -75,7 +140,16 @@
   font-size: 16px;
   font-weight: 600;
 }
-
+.card h5 {
+  color: #53426C;
+  font-size: 14px;
+  font-weight: 400;
+}
+.card label{
+  color: #270659;
+  font-size: 14px;
+  font-weight: 400;
+}
 .subtext {
   font-size: 14px;
   font-weight: 400;
@@ -147,12 +221,32 @@ select {
 }
 
 .mode {
-  margin: 10px 0;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .mode label {
-  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #5a4579;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
 
+.mode input[type="radio"] {
+  accent-color: #270659;
+  /* changes radio circle color */
+  cursor: pointer;
+}
+
+.mode label.active {
+  color: #270659;
+  font-weight: 700;
 }
 
 .mode input {
@@ -169,7 +263,6 @@ select {
 }
 
 .addBtn {
-  margin-top: 8px;
   color: #AD1E24;
   font-size: 14px;
   cursor: pointer;

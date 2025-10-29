@@ -6,9 +6,9 @@ import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify'; 
 import { FaUserPlus, FaTag, FaKey, FaUserFriends } from 'react-icons/fa';
 import   refer  from '../../assets/Refer.jpg';
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle,FaTimes } from "react-icons/fa";
 import { size } from 'zod/v4-mini';
-
+import { ToastContainer } from "react-toastify";
 const CreditsAddCredits = () => {
   const navigate = useNavigate();
   const user = useSelector((state) => state.auth.user.user);
@@ -143,7 +143,10 @@ if (response.data) {
       return (
         item.payment_method?.toLowerCase().includes(search) ||
         item.amount?.toString().includes(search) ||
-        item.date?.toLowerCase().includes(search)
+        item.date?.toLowerCase().includes(search) ||
+        item.no?.toString().includes(search)||
+        item.name?.toLowerCase().includes(search)||
+        item.amount?.toString().includes(search)
       );
     })
   : creditHistory;
@@ -667,7 +670,7 @@ const sortedData = React.useMemo(() => {
             <h2 className="form-title">Add Credit</h2>
             <p className="form-subtitle">Add up to  ₹{creditDetails.maxLimit} to your account</p>
           </div>
-
+<ToastContainer position="top-right" autoClose={3000} />
           {/* Amount Input */}
             <div className="amount-input-section">
               <label className="amount-label" htmlFor="amount-input">
@@ -890,10 +893,11 @@ const sortedData = React.useMemo(() => {
                       {/* Transaction Table */}
                       <div className="transaction-table-container">
                         <table className="transaction-table">
-                          <thead>
+                          <thead style={{color:"#D6E7FF"}}>
                             {historyFilter === 'Credits' ? (
                               <tr>
-                                <th onClick={() => handleSort('payment_method')}>
+                                <th >
+                                {/* <th onClick={() => handleSort('payment_method')} style={{width:"10px"}}> */}
                                   Type {sortConfig.key === 'payment_method' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                                 </th>
                                 <th onClick={() => handleSort('amount')}>
@@ -906,7 +910,7 @@ const sortedData = React.useMemo(() => {
                             ) : (
                               <tr>
                                 <th onClick={() => handleSort('name')}>
-                                  Scheme {sortConfig.key === 'name' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
+                                  Schemes {sortConfig.key === 'name' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
                                 </th>
                                 <th onClick={() => handleSort('no')}>
                                   Tickets {sortConfig.key === 'no' && (sortConfig.direction === 'asc' ? '↑' : '↓')}
@@ -931,7 +935,7 @@ const sortedData = React.useMemo(() => {
                                     <td colSpan="3">
                                       <div className="no-tickets-container">
                                         <div className="no-tickets-content">
-                                          <h2 className="no-tickets-title">No tickets found!</h2>
+                                          <h2 className="no-tickets-title">No credits history found!</h2>
                                         </div>
                                       </div>
                                     </td>
@@ -980,7 +984,7 @@ const sortedData = React.useMemo(() => {
                                     <td colSpan="4">
                                       <div className="no-tickets-container">
                                         <div className="no-tickets-content">
-                                          <h2 className="no-tickets-title">No tickets found!</h2>
+                                          <h2 className="no-tickets-title">No debits history found!</h2>
                                         </div>
                                       </div>
                                     </td>
@@ -1020,37 +1024,37 @@ const sortedData = React.useMemo(() => {
                                     onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
                                   >
                                     <div className="bottom-sheet-header">
-                                      <h3>Filter Options</h3>
+                                      <h3>Filter</h3>
+                                      <h3 onClick={() => { setFromDate(""); setToDate("");setDateError(""); setIsBottomSheetOpen(false); fetchCreditHistoryDetails(historyFilter,fromDate, toDate);}}><FaTimes/></h3>
                                     </div>
+                                    <div className="divider"></div>
                                     <div className="bottom-sheet-content">
                                       {/* Example filter fields */}
                                       <label>
-                                        From:
-                                        <input type="date"  value={fromDate} onChange={(e) => setFromDate(e.target.value)} />
+                                        From
+                                        <input type="date"  value={fromDate} onChange={(e) => setFromDate(e.target.value)} style={{color:"#270659"}} />
                                       </label>
                                       <label>
-                                        To:
-                                        <input type="date"  value={toDate} onChange={(e) => setToDate(e.target.value)}/>
+                                        To
+                                        <input type="date"  value={toDate} onChange={(e) => setToDate(e.target.value)} style={{color:"#270659"}}/>
                                       </label>
-                                      {dateError && (
+                                      {/* {dateError && (
                                         <div className="date-error-message">
                                           <p style={{ color: "red", marginTop: "8px" }}>{dateError}</p>
                                         </div>
-                                      )}
-                                      <button className="apply-btn" 
+                                      )} */}
+                                      <button className="apply-btn" style={{backgroundColor:"#AD1E24", borderRadius:"48px"}}
                                       onClick={() => {  
                                         setDateError("");
                                             if (fromDate && toDate && new Date(fromDate) > new Date(toDate)) {
-                                          setDateError("From date cannot be later than To date.");
+                                          setDateError("Start date should be less than end date.");
+                                              toast.error("Start date should be less than end date.", {
+                                                  position: "top-center", autoClose: 3000, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, theme: "colored", });
                                           return;
                                         }   
                                         fetchCreditHistoryDetails(historyFilter,fromDate, toDate);
                                         setIsBottomSheetOpen(false);  }}>
                                         Apply Filters
-                                      </button>
-                                      <button className="apply-btn" onClick={() => { setFromDate(""); setToDate("");setDateError(""); setIsBottomSheetOpen(false); fetchCreditHistoryDetails(historyFilter,fromDate, toDate); 
-                                      }} >
-                                        Clear Filters
                                       </button>
                                     </div>
                                   </div>
